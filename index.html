@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="cake-container">
+              
+        <div class="cake layer1">
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+    </div>
+       
+        <div class="cake layer2"></div>
+        <div class="cake layer3"></div>
+        
+   </div>
+    
+    <section class="bdy">
+        <h1>happy birthday!</h1>
+        <h2>Cutie!</h2>
+        <h3>Blow🌬️the candle🕯️[by clicking on the flame]</h3>
+       <!-- <h4>
+         <a href="pg2.html">Click here</a>
+        </h4>
+        -->
+    </section>
+
+ 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const flame = document.querySelector(".flame");
+
+    flame.addEventListener("click", function () {
+      flame.classList.add("blow-out");
+
+      // show a smoke puff after flame disappears
+      const puff = document.createElement("div");
+      puff.className = "smoke";
+      flame.parentElement.appendChild(puff);
+
+      setTimeout(() => puff.remove(), 2000); // remove puff after 2s
+    });
+  });
+</script>
+
+</body>
+</html>
